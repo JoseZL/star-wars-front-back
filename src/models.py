@@ -32,7 +32,10 @@ class Planeta(db.Model):
     nombre: Mapped[str] = mapped_column(String(100), nullable=False)
     clima: Mapped[str] = mapped_column(String(50), nullable=True)
     poblacion: Mapped[str] = mapped_column(String(50), nullable=True)
-    descripcion: Mapped[str] = mapped_column(String(250), nullable=True)
+    diametro: Mapped[str] = mapped_column(String(50), nullable=True)
+    periodo_rotacional: Mapped[str] = mapped_column(String(50), nullable=True)
+    periodo_orbital: Mapped[str] = mapped_column(String(50), nullable=True)
+    descripcion: Mapped[str] = mapped_column(String(1250), nullable=True)
     personajes = db.relationship('Personaje', back_populates='planeta_origen')
     favoritos = db.relationship('Favorito', back_populates='planeta')
 
@@ -42,6 +45,9 @@ class Planeta(db.Model):
             "nombre": self.nombre,
             "clima": self.clima,
             "poblacion": self.poblacion,
+            "diametro": self.diametro,
+            "periodo_rotacional": self.periodo_rotacional,
+            "periodo_orbital": self.periodo_orbital,
             "descripcion": self.descripcion,
         }
 
@@ -71,7 +77,7 @@ class Personaje(db.Model):
     nombre: Mapped[str] = mapped_column(String(100), nullable=False)
     especie: Mapped[str] = mapped_column(String(50), nullable=True)
     planeta_origen_id: Mapped[int] = mapped_column(db.ForeignKey('planeta.id'), nullable=True)
-    descripcion: Mapped[str] = mapped_column(String(250), nullable=True)
+    descripcion: Mapped[str] = mapped_column(String(1000), nullable=True)
     planeta_origen = db.relationship('Planeta', back_populates='personajes')
     favoritos = db.relationship('Favorito', back_populates='personaje')
     vehiculos = db.relationship('Vehiculo', back_populates='quien')

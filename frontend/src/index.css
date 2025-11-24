@@ -1,0 +1,70 @@
+.list-group-item {
+    background: #23272b !important;
+    color: #fff;
+    border: none;
+}
+.main-custom {
+    background: #000;
+    min-height: 100vh;
+}
+.navbar-custom {
+    background: #000;
+    border-bottom: 1px solid #fff;
+}
+.navbar-logo {
+    height: 210px;
+    max-width: 320px;
+    object-fit: contain;
+    background: transparent;
+}
+.navbar-link {
+    border: none;
+}
+.navbar-link-favorites {
+    border: none;
+    min-width: 120px;
+}
+.section-separator {
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 24px;
+    width: 100%;
+}
+.card-custom {
+    width: 18rem;
+    background: #23272b !important;
+    border: none;
+}
+.card {
+    background: #23272b !important;
+    border: none;
+}
+.ver-mas-link {
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.fav-btn {
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    transition: color 0.2s;
+}
+.fav-btn.favorited {
+    color: #ff1744;
+}
+.btn-outline-warning {
+    border: none !important;
+}
+.ver-mas-link:hover {
+    filter: brightness(1.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    background-color: #000 !important;
+}
+body, .container, .card, .card-title, .card-body, .btn, h1, h2, h3, h4, h5, h6, p, a, li, ul, label, input, select, option {
+    color: #fff !important;
+}
